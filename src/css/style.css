@@ -116,6 +116,7 @@ section figure {
   display: flex;
   justify-content: center;
   align-items: center;
+
   &::before {
     content: "";
     position: absolute;
@@ -132,6 +133,7 @@ section figure {
   from {
     transform: rotate(0deg);
   }
+
   from {
     transform: rotate(365deg);
   }
@@ -146,8 +148,8 @@ section .foto-perfil {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  filter: blur(3px);
-  user-select: none;
+  /* filter: blur(3px);
+  user-select: none; */
 }
 
 h1 {
@@ -227,6 +229,86 @@ h2 {
 
   &::after {
     display: none;
+  }
+}
+
+button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: fit-content;
+  outline: 0;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  color: var(--blck);
+  box-shadow: -3px 3px 15px #0000002a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+
+  &:hover,
+  &:focus {
+    background-color: var(--blck);
+    color: var(--white);
+    box-shadow: -3px 3px 15px transparent;
+  }
+
+  &:hover::after,
+  &:hover::before,
+  &:focus::after,
+  &:focus::before {
+    background-color: var(--blck);
+    color: var(--white);
+    box-shadow: -3px 3px 15px transparent;
+    opacity: 1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(-50px) scale(1);
+  }
+
+  &:focus::before,
+  &:hover::before {
+    transform: rotate(45deg) scale(1);
+    margin-top: -75px;
+  }
+
+  &:active {
+    transform: scale(90%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "Baixar CV";
+    color: var(--white);
+    background-color: var(--blck);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 70px;
+    padding: 5px;
+    transform: translateY(0) scale(0);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--blck);
+    transform: rotate(45deg) scale(0);
+    margin-top: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s ease;
   }
 }
 
