@@ -148,8 +148,6 @@ section .foto-perfil {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  /* filter: blur(3px);
-  user-select: none; */
 }
 
 h1 {
