@@ -233,7 +233,7 @@ h2 {
 }
 
 button {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
   width: fit-content;
@@ -251,6 +251,7 @@ button {
   align-items: center;
   gap: 10px;
   font-size: 1.2rem;
+  z-index: 9999;
 
   &:hover,
   &:focus {
