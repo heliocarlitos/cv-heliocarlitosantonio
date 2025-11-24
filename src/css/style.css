@@ -17,9 +17,12 @@ body {
 }
 
 a {
+  margin-top: -5px;
   text-decoration: none;
   color: var(--blck);
   transition: 0.3s ease;
+  padding: 5px 10px;
+  transform: translateX(-10px);
 
   &:hover {
     text-decoration: underline;
